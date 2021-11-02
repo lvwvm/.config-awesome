@@ -2,9 +2,9 @@
 
 ## run (only once) processes which spawn with the same name
 function run() {
-	if (command -v "$1" && ! pgrep "$1"); then
-		"$@" &
-	fi
+  if (command -v "$1" && ! pgrep "$1"); then
+    "$@" &
+  fi
 }
 
 ## run (only once) processes which spawn with different name
@@ -12,17 +12,18 @@ function run() {
 #   gnome-keyring-daemon --daemonize --login &
 # fi
 
-if (command -v start-pulseaudio-x11 && ! pgrep pulseaudio); then
-	start-pulseaudio-x11 &
-fi
+# Deprecated in favor of pipewire-pulse.
+# if (command -v start-pulseaudio-x11 && ! pgrep pulseaudio); then
+#   start-pulseaudio-x11 &
+# fi
 
 if (command -v /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 && ! pgrep polkit-mate-aut); then
-	/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+  /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 fi
 
 # System-config-printer-applet is not installed in minimal edition
 if (command -v system-config-printer-applet && ! pgrep applet.py); then
-	system-config-printer-applet &
+  system-config-printer-applet &
 fi
 
 # screen locker
