@@ -49,3 +49,6 @@ run blueman-applet
 
 # power manager
 run powerkit
+
+# compositor
+run picom
