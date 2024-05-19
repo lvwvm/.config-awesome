@@ -27,7 +27,7 @@ if (command -v system-config-printer-applet && ! pgrep applet.py); then
 fi
 
 # screen locker
-run light-locker --lock-after-screensaver=$((60 * 45)) --lock-on-suspend --lock-on-lid --no-idle-hint
+run light-locker --lock-after-screensaver=$((60 * 45)) --lock-on-suspend --lock-on-lid
 
 # screen savers
 run xscreensaver
