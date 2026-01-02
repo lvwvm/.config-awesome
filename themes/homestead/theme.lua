@@ -23,6 +23,10 @@ theme.border_normal = "#000000"
 theme.border_focus = "#16A085"
 theme.border_marked = "#16A085"
 
+-- Custom wibar colors
+theme.wibar_separator = "#9EBABA"
+theme.wibar_accent = "#EB8F8F"
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
